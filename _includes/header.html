@@ -1,0 +1,32 @@
+<div id="header">
+	<div id="logo-nav">
+		<div id="logo">
+				<h1>
+					<a href="/" title="Hujun's Notes">Hujun's Notes</a>
+				</h1>
+				<h2>Thinking, Studying, Sharing</h2>
+			</div>
+			
+			<ul id="nav">
+				{% if page.page_name == 'archive'%}
+				<li><a href="/">Home</a></li>
+				<li><a href="/archive.html" class="selected">Archive</a></li>
+				<li><a href="/about.html">About</a></li>
+				{% elsif page.page_name == 'about'%}
+				<li><a href="/">Home</a></li>
+				<li><a href="/archive.html">Archive</a></li>
+				<li><a href="/about.html" class="selected">About</a></li>
+				{% elsif page.page_name == 'resume'%}
+				<li><a href="/">Home</a></li>
+				<li><a href="/archive.html">Archive</a></li>
+				<li><a href="/about.html">About</a></li>
+				{% else %}
+				<li><a href="/" class="selected">Home</a></li>
+				<li><a href="/archive.html">Archive</a></li>
+				<li><a href="/about.html">About</a></li>
+				{% endif%}
+			</ul>
+			
+			<div class="clear"></div>
+		</div>
+</div>

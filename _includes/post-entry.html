@@ -1,0 +1,15 @@
+<div class="post">
+	<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+	<p>
+		<span class="date">Post @ {{ page.date | date_to_string }}</span>
+		<span class="tag">Tag: 
+			{% for tag in page.tags %}
+				<a href="/tags#{{ tag | escape }}" rel="tag">{{tag}}</a>
+				{% if forloop.last != true %},{% endif %}
+			{% endfor %}
+		</span>
+	</p>
+	<div class="post-content">
+		{{ page.content }}
+	</div>
+</div>

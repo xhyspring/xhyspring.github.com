@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{ page.title }}</title>
+{% if page.description %}
+<meta name="description" content="{{ page.description }}"/>
+{% endif %}
+<meta content="hujun, rissen, java, linux, js, web, gae, automation testing" name="keywords">
+
+<!-- <link href="style.css" type="text/css" rel="stylesheet" /> -->
+<style>
+	body{
+		margin:0;
+		padding:0;
+		font-size: 12px;
+		color: #333333;
+		font-family: "Lucida Grande","Lucida",Arial,Helvetica,sans-serif;
+	}
+	a{
+		text-decoration: none;
+		color: #555555;
+	}
+	a:hover{
+		color: #FF6600;
+	}
+	ul{
+		margin:0;
+		padding:0;
+	}
+	ul li{
+		list-style: none;
+	}
+	#logo{
+		margin: 12px 0 12px 0;
+		float: left;
+	}
+	#logo h1{
+		margin:0;
+		padding:0;
+	}
+	#logo h2{
+		margin:0;
+		padding:0;
+		font-size: 12px;
+		color: #AAAAAA;
+	}
+	#logo a{
+		/*color: #FF6600;*/
+		color: #000000;
+	}
+	#logo a:hover{
+		/*color: #88201B; 88201B*/
+	}
+	#header{
+		background: #EDEDED; /*#EDEDED*/
+	}
+	#logo-nav{
+		width: 800px;
+		margin: auto;
+	}
+	#nav{
+		float: right;
+		text-align: right;
+		padding:0;
+	}
+	#nav li{
+		display: inline-block;
+		margin: 0 0 0 12px;
+	}
+	#nav li a{
+		font-weight: bold;
+		display: inline;
+	}
+	#nav li a:hover{
+		color: #FF6600;
+	}
+	#nav li .selected{
+		color: #FF6600;
+	}
+	
+	.post{
+		margin: 0 0 24px 0;
+	}
+	.date{
+		float: right;
+		text-align: right;
+		font-family: Georgia;;
+	}
+	
+	#main{
+		margin: auto;
+		padding:10px 0;
+		width: 800px;
+	}
+	#main-left{
+		float: left;
+		width: 600px;
+	}
+	#main-right{
+		float:right;
+		width: 160px;
+	}
+	#footer{
+		background:#F9F9F9;
+	}
+	#footer div{
+		line-height: 38px;
+		width: 800px;
+		margin: auto;
+	}
+	.clear{
+		clear: both;
+	}
+
+</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8963226-15']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</head>
+<body>
+	{% include header.html %}
+	<div id="main">
+		<div id="main-left">
+			{{ content}}
+		</div>
+		{% include sidebar.html %}
+		<div class="clear">
+		</div>
+	</div>
+	{% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+---
+layout: default
+title: Hujun's Note
+description: just a place that recording my life, to be with roye.
+--- 
+
+{% for page in paginator.posts %}
+{% include post-entry.html %}
+{% endfor %}
+
+{% include paginator.html %}
+
